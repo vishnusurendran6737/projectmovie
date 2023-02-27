@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row" style="display:flex; justify-content:space-around;">
+        <div class="col-md-6">
+            <img src="{{movie.img.url}}" align="left" width="250" height="250">
+        </div>
+        <div class="col-md-6">
+            <h6>{{movie.name}}</h6>
+            <h4 align="left">{{movie.desc}}</h4>
+            <h6>{{movie.year}}</h6>
+            <a class= "btn btn-warning" href="{% url 'movie_app:update' movie.id %}">Update</a>
+             <a class= "btn btn-danger" href="{% url 'movie_app:delete' movie.id %}">Delete</a>
+
+
+        </div>
+
+
+        </div>
+</div>
+{% endblock %}
